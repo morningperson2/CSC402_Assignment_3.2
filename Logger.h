@@ -7,11 +7,10 @@
 
 
 #include <string>
-#include <fstream>
 
 class Logger {
   public:
-    void log(std::string output);
+    void log(const std::string& output);
     static Logger& getInstance();
 
     ~Logger();
@@ -20,7 +19,7 @@ private:
     Logger();
     Logger(Logger const& l);
     Logger& operator=(Logger const& l);
-    std::ofstream logFile;
+    std::string fullLog;
 };
 
 

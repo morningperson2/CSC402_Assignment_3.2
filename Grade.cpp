@@ -4,6 +4,8 @@
 
 #include "Grade.h"
 
+#include <utility>
+
 int Grade::getEarned() const {
   return pointsEarned_;
 }
@@ -33,7 +35,14 @@ void Grade::setWeight(double weight) {
 }
 
 void Grade::setAssignment(std::string assignment) {
-  assignment_ = assignment;
+  assignment_ = std::move(assignment);
+}
+
+void Grade::setAll(int earned, int total, double weight, std::string assignment) {
+  setEarned(earned);
+  setTotal(total);
+  setWeight(weight);
+  setAssignment(std::move(assignment));
 }
 
 double Grade::score() const{

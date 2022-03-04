@@ -21,6 +21,7 @@ public:
     void setTotal(int total);
     void setWeight(double weight);
     void setAssignment(std::string assignment);
+    void setAll(int earned, int total, double weight, std::string assignment);
 
     double score() const;
 
@@ -29,9 +30,6 @@ private:
     int totalPoints_;
     double weight_;
     std::string assignment_;
-
-protected:
-    static Logger logger;
 };
 
 

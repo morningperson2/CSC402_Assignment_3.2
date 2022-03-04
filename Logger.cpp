@@ -5,11 +5,10 @@
 #include <iostream>
 #include "Logger.h"
 
-void Logger::log(std::string output) {
-  time_t currentTime;
-  time(&currentTime);
+void Logger::log(const std::string& output) {
 
-  logFile<<currentTime<<": "<<output<<std::endl;
+  fullLog.append(output);
+  //std::cout<<output;
 }
 
 Logger &Logger::getInstance() {
@@ -18,17 +17,21 @@ Logger &Logger::getInstance() {
 }
 
 Logger::Logger() {
-  logFile.open("LogFile.txt");
+  /*logFile.open("LogFile.txt");
 
   if(!logFile.is_open())
   {
     std::cout<<"LogFile couldn't be opened."<<std::endl;
   }
+   */
+  fullLog = "";
 }
 
+
 Logger::~Logger() {
-  if(logFile)
+  /*if(logFile)
   {
     logFile.close();
-  }
+  }*/
+  std::cout<<fullLog<<std::endl;
 }
