@@ -1,12 +1,34 @@
-//
-// Created by paulh on 2/14/2022.
-//
+/******************************************************************************/
+/*!
+\file   main.cpp
+\author Paul Huffman
+\par    email: huffmanp4\@nku.edu
+\par    Course: CSC402
+\par    Section: 001
+\par    Assignment: 3
+\date   3/06/2022
+\brief
+  This file contains the main function for the student assignment.
+
+  Hours spent on this assignment: 10
+  Specific portions that gave you the most trouble: Student
+*/
+/******************************************************************************/
 
 #include "Student.h"
 #include "Grade.h"
 #include "Logger.h"
 
+/****************************************************************************/
+/*!
+  \brief
+    This function is the main function. It will test the classes that have
+    been made.
 
+  \return
+    The function will always return 0.
+*/
+/****************************************************************************/
 int main(){
   Logger &logger = Logger::getInstance();
   std::vector<Grade*> grades;

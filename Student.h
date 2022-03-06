@@ -1,6 +1,32 @@
-//
-// Created by paulh on 2/14/2022.
-//
+/******************************************************************************/
+/*!
+\file   Student.h
+\author Paul Huffman
+\par    email: huffmanp4\@nku.edu
+\par    Course: CSC402
+\par    Section: 001
+\par    Assignment: 3
+\date   3/06/2022
+\brief
+  This file contains the declaration of the student class.
+  Functions included:
+    Student()
+    ~Student
+    Student()
+    operator=()
+    calculateFinal()
+    calculateLetterGrade()
+    printReport()
+    gitId()
+    getName()
+    getGrades()
+    setName()
+    setGrades()
+
+  Hours spent on this assignment: 10
+  Specific portions that gave you the most trouble: Student
+*/
+/******************************************************************************/
 
 #ifndef ASSIGNMENT_3_STUDENT_H
 #define ASSIGNMENT_3_STUDENT_H
@@ -44,12 +70,12 @@ public:
 
 private:
 
-    int id_;
-    std::string name_;
-    std::vector<Grade*> grades_;
+    int id_;                     //!< The id number of a student. Each is unique.
+    std::string name_;           //!< The name of a student.
+    std::vector<Grade*> grades_; //!< The grades for the student.
 
 protected:
-    static int nextId_;
+    static int nextId_;          //!< The next id that will be used.
 
 };
 

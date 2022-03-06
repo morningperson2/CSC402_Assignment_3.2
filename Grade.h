@@ -1,6 +1,30 @@
-//
-// Created by paulh on 2/14/2022.
-//
+/******************************************************************************/
+/*!
+\file   Grade.h
+\author Paul Huffman
+\par    email: huffmanp4\@nku.edu
+\par    Course: CSC402
+\par    Section: 001
+\par    Assignment: 3
+\date   3/06/2022
+\brief
+  This file contains the declaration of the grade class.
+  Functions included:
+    getEarned()
+    getTotal()
+    getWeight()
+    getAssignment()
+    setEarned()
+    setTotal()
+    setWeight()
+    setAssignment()
+    setAll()
+    score()
+
+  Hours spent on this assignment: 10
+  Specific portions that gave you the most trouble: Student
+*/
+/******************************************************************************/
 
 #ifndef ASSIGNMENT_3_GRADE_H
 #define ASSIGNMENT_3_GRADE_H
@@ -26,10 +50,10 @@ public:
     double score() const;
 
 private:
-    int pointsEarned_;
-    int totalPoints_;
-    double weight_;
-    std::string assignment_;
+    int pointsEarned_;       //!< The number of points earned on an assignment.
+    int totalPoints_;        //!< The total number of point on an assignment.
+    double weight_;          //!< The weight for the assignment.
+    std::string assignment_; //!< The name of the assignment.
 };
 
 
